@@ -1,0 +1,103 @@
+# 模块引用层次结构图
+e203_cpu_top
+[1]  *e203_cpu
+[2]  *---|e203_clk_ctrl
+[3]  *---|---|e203_clkgate
+[3]  *---|---|e203_clkgate
+[3]  *---|---|e203_clkgate
+[3]  *---|---|e203_clkgate
+[3]  *---|---|e203_clkgate
+[3]  *---|---|e203_clkgate
+[2]  *---|e203_irq_sync
+[2]  *---|e203_extend_csr
+[2]  *---|e203_subsys_nice_core
+[2]  *---|e203_core
+[3]  *---|---|e203_ifu
+[4]  *---|---|---|e203_ifu_ifetch
+[5]  *---|---|---|---|e203_ifu_litebpu
+[4]  *---|---|---|e203_ifu_ift2icb
+[3]  *---|---|e203_exu
+[4]  *---|---|---|e203_exu_regfile
+[4]  *---|---|---|e203_exu_decode
+[4]  *---|---|---|e203_exu_disp
+[4]  *---|---|---|e203_exu_oitf
+[4]  *---|---|---|e203_exu_alu
+[5]  *---|---|---|---|e203_exu_nice
+[5]  *---|---|---|---|e203_exu_alu_csrctrl
+[5]  *---|---|---|---|e203_exu_alu_bjp
+[5]  *---|---|---|---|e203_exu_alu_lsuagu
+[5]  *---|---|---|---|e203_exu_alu_rglr
+[5]  *---|---|---|---|e203_exu_alu_muldiv
+[5]  *---|---|---|---|e203_exu_alu_dpath
+[4]  *---|---|---|e203_exu_longpwbck
+[4]  *---|---|---|e203_exu_wbck
+[4]  *---|---|---|e203_exu_commit
+[5]  *---|---|---|---|e203_exu_branchslv
+[5]  *---|---|---|---|e203_exu_excp
+[4]  *---|---|---|e203_exu_csr
+[3]  *---|---|e203_lsu
+[4]  *---|---|---|e203_lsu_ctrl
+[3]  *---|---|e203_biu
+[2]  *---|e203_itcm_ctrl
+[3]  *---|---|sirv_sram_icb_ctrl
+[4]  *---|---|---|sirv_1cyc_sram_ctrl
+[5]  *---|---|---|---|e203_clkgate
+[2]  *---|e203_dtcm_ctrl
+[3]  *---|---|sirv_sram_icb_ctrl
+[4]  *---|---|---|sirv_1cyc_sram_ctrl
+[5]  *---|---|---|---|e203_clkgate
+[1]  *e203_srams
+[2]  *---|e203_itcm_ram
+[3]  *---|---|sirv_gnrl_ram
+[4]  *---|---|---|sirv_sim_ram
+[2]  *---|e203_dtcm_ram
+[3]  *---|---|sirv_gnrl_ram
+[4]  *---|---|---|sirv_sim_ram
+
+
+
+
+# 涉及子模块文件名
+1:e203_biu
+2:e203_clk_ctrl
+3:e203_clkgate
+4:e203_core
+5:e203_cpu
+6:e203_cpu_top
+7:e203_dtcm_ctrl
+8:e203_dtcm_ram
+9:e203_extend_csr
+10:e203_exu
+11:e203_exu_alu
+12:e203_exu_alu_bjp
+13:e203_exu_alu_csrctrl
+14:e203_exu_alu_dpath
+15:e203_exu_alu_lsuagu
+16:e203_exu_alu_muldiv
+17:e203_exu_alu_rglr
+18:e203_exu_branchslv
+19:e203_exu_commit
+20:e203_exu_csr
+21:e203_exu_decode
+22:e203_exu_disp
+23:e203_exu_excp
+24:e203_exu_longpwbck
+25:e203_exu_nice
+26:e203_exu_oitf
+27:e203_exu_regfile
+28:e203_exu_wbck
+29:e203_ifu
+30:e203_ifu_ifetch
+31:e203_ifu_ift2icb
+32:e203_ifu_litebpu
+33:e203_irq_sync
+34:e203_itcm_ctrl
+35:e203_itcm_ram
+36:e203_lsu
+37:e203_lsu_ctrl
+38:e203_srams
+39:e203_subsys_nice_core
+40:sirv_1cyc_sram_ctrl
+41:sirv_gnrl_ram
+42:sirv_sim_ram
+43:sirv_sram_icb_ctrl
